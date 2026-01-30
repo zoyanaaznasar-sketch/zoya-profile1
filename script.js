@@ -1,16 +1,16 @@
 const pills = document.querySelectorAll(".pill");
-const cards = document.querySelectorAll(".achievement-card");
+const cards = document.querySelectorAll(".card");
 
 pills.forEach(pill => {
   pill.addEventListener("click", () => {
     pills.forEach(p => p.classList.remove("active"));
     pill.classList.add("active");
 
-    const cat = pill.dataset.cat;
+    const type = pill.dataset.type;
 
     cards.forEach(card => {
       card.style.display =
-        card.dataset.cat === cat ? "block" : "none";
+        card.dataset.type === type ? "block" : "none";
     });
   });
 });
