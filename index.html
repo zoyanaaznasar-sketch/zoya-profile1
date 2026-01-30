@@ -2,176 +2,140 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Zoya Naaz Nasar | Student Portfolio</title>
+  <title>Zoya Naaz Nasar | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Link CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- ===== HERO / PROFILE SECTION ===== -->
-  <section class="hero">
-    <div class="hero-content">
-      <img src="profile.jpg" alt="Zoya Profile Photo" class="profile-pic">
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+  <div class="nav-left">ZNN</div>
+  <div class="nav-right">
+    <a href="#about">About</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#journey">Journey</a>
+  </div>
+</nav>
 
-      <div class="hero-text">
-        <h1>Zoya Naaz Nasar</h1>
-        <p class="headline">
-          Academically driven student | Mathematics & Economics enthusiast | Leadership & Public Speaking
-        </p>
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="floating-blob blob1"></div>
+  <div class="floating-blob blob2"></div>
 
-        <p class="intro">
-          A consistently high-achieving student with a strong academic record, leadership experience,
-          and global exposure through competitions, MUNs, and public speaking platforms.
-        </p>
+  <div class="hero-content">
+    <img src="profile.jpg" class="profile-pic" alt="Profile Photo">
 
-        <div class="hero-links">
-          <a href="#about">About</a>
-          <a href="#achievements">Achievements</a>
-          <a href="#journey">Journey</a>
-        </div>
-      </div>
+    <h1>Zoya Naaz Nasar</h1>
+    <p class="headline">
+      High-achieving student | Mathematics & Economics | Leadership & Public Speaking
+    </p>
+
+    <div class="scroll-cue">Scroll ↓</div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section dark-card">
+  <h2>About Me</h2>
+  <p>
+    I am a consistently high-performing student with a strong academic record in Mathematics
+    and Economics. Alongside academics, I actively participate in competitions, leadership
+    programs, debates, and Model United Nations conferences.
+  </p>
+  <p>
+    My interests extend beyond academics to baking, crocheting, and cycling — activities that
+    reflect creativity, discipline, and balance.
+  </p>
+</section>
+
+<!-- ===== ACHIEVEMENTS ===== -->
+<section id="achievements" class="section">
+  <h2 class="section-title">Achievements</h2>
+
+  <!-- Category Pills -->
+  <div class="pill-bar">
+    <span class="pill active" data-cat="academics">Academics</span>
+    <span class="pill" data-cat="competitions">Competitions</span>
+    <span class="pill" data-cat="leadership">Leadership</span>
+    <span class="pill" data-cat="mun">MUNs & Debates</span>
+  </div>
+
+  <!-- Horizontal Scroll -->
+  <div class="horizontal-scroll">
+
+    <!-- Academics -->
+    <div class="achievement-card" data-cat="academics">
+      <h3>School Topper</h3>
+      <p>School Topper in Mathematics and Economics.</p>
     </div>
 
-    <div class="scroll-indicator">Scroll ↓</div>
-  </section>
-
-  <!-- ===== ABOUT SECTION ===== -->
-  <section id="about" class="section card">
-    <h2>About Me</h2>
-    <p>
-      I am a motivated and disciplined student with a strong interest in Mathematics, Economics,
-      and analytical thinking. Over the years, I have maintained academic excellence while actively
-      participating in competitions, debates, Model United Nations conferences, and leadership programs.
-    </p>
-
-    <p>
-      Beyond academics, I enjoy baking, crocheting, and cycling — hobbies that help me maintain balance,
-      creativity, and focus alongside a rigorous academic life.
-    </p>
-  </section>
-
-  <!-- ===== ACHIEVEMENTS SECTION ===== -->
-  <section id="achievements" class="section">
-    <h2>Achievements & Recognition</h2>
-
-    <!-- Category Bubbles -->
-    <div class="achievement-tabs">
-      <button class="tab active" data-category="academics">Academics</button>
-      <button class="tab" data-category="competitions">Competitions</button>
-      <button class="tab" data-category="leadership">Leadership</button>
-      <button class="tab" data-category="mun">MUNs & Debates</button>
+    <div class="achievement-card" data-cat="academics">
+      <h3>5-Year High Achiever</h3>
+      <p>Maintained high academic performance for five consecutive years.</p>
     </div>
 
-    <!-- Horizontal Scroll Container -->
-    <div class="achievement-scroll">
-
-      <!-- Academics -->
-      <div class="achievement-card" data-category="academics">
-        <h3>School Topper</h3>
-        <p>
-          School Topper in <strong>Mathematics</strong> and <strong>Economics</strong>,
-          demonstrating consistent academic excellence and subject mastery.
-        </p>
-      </div>
-
-      <div class="achievement-card" data-category="academics">
-        <h3>High Achiever</h3>
-        <p>
-          Recognised as a <strong>high-achieving student for 5 consecutive years</strong>,
-          maintaining strong academic performance across all subjects.
-        </p>
-      </div>
-
-      <div class="achievement-card" data-category="academics">
-        <h3>Asset Gold Scholar</h3>
-        <p>
-          Awarded the <strong>ASSET Gold Scholar</strong> title in Mathematics for exceptional
-          analytical and problem-solving skills.
-        </p>
-      </div>
-
-      <!-- Competitions -->
-      <div class="achievement-card" data-category="competitions">
-        <h3>20+ Competitions</h3>
-        <p>
-          Participated in <strong>20+ academic and inter-school competitions</strong>,
-          gaining experience in problem-solving, teamwork, and competitive environments.
-        </p>
-      </div>
-
-      <div class="achievement-card" data-category="competitions">
-        <h3>10+ Awards</h3>
-        <p>
-          Recipient of <strong>10+ awards</strong> across academics, competitions,
-          and extracurricular activities.
-        </p>
-      </div>
-
-      <!-- Leadership -->
-      <div class="achievement-card" data-category="leadership">
-        <h3>Duke of Edinburgh</h3>
-        <p>
-          Successfully completed the <strong>Duke of Edinburgh Bronze Award</strong>,
-          demonstrating commitment, resilience, and community engagement.
-        </p>
-      </div>
-
-      <div class="achievement-card" data-category="leadership">
-        <h3>Toastmasters Leadership</h3>
-        <p>
-          Member of the <strong>Toastmasters ACE Gavel Executive Committee</strong>,
-          developing leadership, communication, and organisational skills.
-        </p>
-      </div>
-
-      <!-- MUNs -->
-      <div class="achievement-card" data-category="mun">
-        <h3>6+ MUNs & Debates</h3>
-        <p>
-          Attended <strong>6+ Model United Nations conferences and debates</strong>,
-          building global awareness, diplomacy, and public speaking confidence.
-        </p>
-      </div>
-
-      <div class="achievement-card" data-category="mun">
-        <h3>FWWMUN</h3>
-        <p>
-          Participated in <strong>FWWMUN</strong>, engaging in international discourse
-          and collaborative problem-solving.
-        </p>
-      </div>
-
-      <div class="achievement-card" data-category="mun">
-        <h3>Trinity Certification</h3>
-        <p>
-          Achieved <strong>Trinity Grade 5 Certification</strong> in Plays in Production,
-          strengthening performance and presentation skills.
-        </p>
-      </div>
-
+    <div class="achievement-card" data-cat="academics">
+      <h3>ASSET Gold Scholar</h3>
+      <p>Recognised nationally for excellence in Mathematics.</p>
     </div>
-  </section>
 
-  <!-- ===== JOURNEY SECTION ===== -->
-  <section id="journey" class="section card">
-    <h2>Academic & Personal Journey</h2>
-    <p>
-      My journey reflects a balance of academic rigor, leadership development,
-      and global exposure. From excelling consistently in Mathematics and Economics
-      to representing my school in competitions and conferences, I have focused on
-      growth, discipline, and impact.
-    </p>
+    <!-- Competitions -->
+    <div class="achievement-card" data-cat="competitions">
+      <h3>20+ Competitions</h3>
+      <p>Participated in 20+ academic and inter-school competitions.</p>
+    </div>
 
-    <p>
-      Each experience has contributed to shaping my analytical mindset,
-      communication skills, and long-term academic ambitions.
-    </p>
-  </section>
+    <div class="achievement-card" data-cat="competitions">
+      <h3>10+ Awards</h3>
+      <p>Recipient of awards across academics and competitions.</p>
+    </div>
 
-  <!-- Link JS -->
-  <script src="script.js"></script>
+    <!-- Leadership -->
+    <div class="achievement-card" data-cat="leadership">
+      <h3>Duke of Edinburgh</h3>
+      <p>Completed Duke of Edinburgh Bronze Award.</p>
+    </div>
+
+    <div class="achievement-card" data-cat="leadership">
+      <h3>Toastmasters ACE</h3>
+      <p>Executive Committee member at Toastmasters ACE Gavel Club.</p>
+    </div>
+
+    <!-- MUN -->
+    <div class="achievement-card" data-cat="mun">
+      <h3>6+ MUNs & Debates</h3>
+      <p>Active participation in Model United Nations and debates.</p>
+    </div>
+
+    <div class="achievement-card" data-cat="mun">
+      <h3>FWWMUN</h3>
+      <p>Represented in international MUN discourse.</p>
+    </div>
+
+    <div class="achievement-card" data-cat="mun">
+      <h3>Trinity Grade 5</h3>
+      <p>Certified in Plays in Production.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== JOURNEY ===== -->
+<section id="journey" class="section dark-card end-section">
+  <h2>Journey & Outlook</h2>
+  <p>
+    My academic and extracurricular journey reflects discipline, curiosity,
+    and a drive for excellence. Each experience has shaped my analytical thinking,
+    leadership skills, and confidence.
+  </p>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,17 +1,16 @@
-// Achievement category filtering
-const tabs = document.querySelectorAll(".tab");
+const pills = document.querySelectorAll(".pill");
 const cards = document.querySelectorAll(".achievement-card");
 
-tabs.forEach(tab => {
-  tab.addEventListener("click", () => {
-    tabs.forEach(t => t.classList.remove("active"));
-    tab.classList.add("active");
+pills.forEach(pill => {
+  pill.addEventListener("click", () => {
+    pills.forEach(p => p.classList.remove("active"));
+    pill.classList.add("active");
 
-    const category = tab.dataset.category;
+    const cat = pill.dataset.cat;
 
     cards.forEach(card => {
       card.style.display =
-        card.dataset.category === category ? "block" : "none";
+        card.dataset.cat === cat ? "block" : "none";
     });
   });
 });
