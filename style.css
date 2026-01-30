@@ -1,3 +1,4 @@
+/* ===== GLOBAL ===== */
 * {
   margin: 0;
   padding: 0;
@@ -5,49 +6,19 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #f6e6ff, #fde2f3);
-  color: #1a1a1a;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #f6d1ff, #d6ccff);
+  color: #111;
+  line-height: 1.7;
 }
 
-/* NAVBAR */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 18px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-}
-
-.nav-left {
-  font-weight: 700;
-  font-size: 1.4rem;
-}
-
-.nav-right {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
-
-.nav-right a {
-  text-decoration: none;
-  color: #1a1a1a;
-  font-weight: 500;
-}
-
-/* HERO */
+/* ===== HERO ===== */
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding-top: 120px;
+  align-items: center;
+  padding: 40px;
 }
 
 .hero-content {
@@ -58,130 +29,104 @@ body {
 }
 
 .profile-pic {
-  width: 220px;
-  height: 220px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 0 6px #e7b6ff;
-  animation: float 5s ease-in-out infinite;
+  border: 4px solid black;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  color: #7b2cbf;
+.hero-text h1 {
+  font-size: 2.8rem;
 }
 
-.hero h2 {
-  font-size: 1.2rem;
-  margin: 10px 0 20px;
-  font-weight: 500;
+.headline {
+  font-weight: 600;
+  margin: 10px 0;
 }
 
-.hero p {
+.intro {
+  margin-top: 10px;
   max-width: 500px;
-  line-height: 1.7;
 }
 
-/* SECTIONS */
-.section {
-  padding: 80px 60px;
+.hero-links a {
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
 }
 
-.section-title {
-  font-size: 2.2rem;
-  margin-bottom: 30px;
-  color: #7b2cbf;
-}
-
-.about-text {
-  max-width: 800px;
-  line-height: 1.8;
-}
-
-/* STATS */
-.stats {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 40px;
-}
-
-.stat-card {
-  background: white;
-  padding: 25px 35px;
-  border-radius: 18px;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #7b2cbf;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-  text-align: center;
-}
-
-.stat-card span {
-  display: block;
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
   font-size: 0.9rem;
-  color: #000;
-  font-weight: 500;
 }
 
-/* ACHIEVEMENTS */
+/* ===== SECTIONS ===== */
+.section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== ACHIEVEMENTS ===== */
 .achievement-tabs {
   display: flex;
-  gap: 15px;
-  margin-bottom: 25px;
+  gap: 10px;
+  margin-bottom: 30px;
 }
 
 .tab {
-  padding: 8px 18px;
-  background: #f1cfff;
+  padding: 8px 16px;
   border-radius: 20px;
-  font-size: 0.85rem;
+  border: 2px solid black;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .tab.active {
-  background: #7b2cbf;
+  background: black;
   color: white;
 }
 
 .achievement-scroll {
   display: flex;
-  gap: 25px;
+  gap: 20px;
   overflow-x: auto;
   padding-bottom: 20px;
 }
 
 .achievement-card {
-  min-width: 300px;
+  min-width: 260px;
   background: white;
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
 }
 
 .achievement-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
 }
 
-.achievement-card h4 {
-  color: #7b2cbf;
-  margin-bottom: 10px;
-}
-
-/* ANIMATION */
-@keyframes float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-}
-
-/* MOBILE */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .hero-content {
     flex-direction: column;
     text-align: center;
-  }
-
-  .stats {
-    flex-direction: column;
   }
 }

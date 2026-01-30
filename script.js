@@ -1,8 +1,17 @@
-// Smooth scroll for navbar links
-document.querySelectorAll('.nav-right a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    document.querySelector(link.getAttribute('href'))
-      .scrollIntoView({ behavior: 'smooth' });
+// Achievement category filtering
+const tabs = document.querySelectorAll(".tab");
+const cards = document.querySelectorAll(".achievement-card");
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+
+    const category = tab.dataset.category;
+
+    cards.forEach(card => {
+      card.style.display =
+        card.dataset.category === category ? "block" : "none";
+    });
   });
 });
